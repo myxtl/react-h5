@@ -1,0 +1,51 @@
+.tab {
+    position: fixed;
+    bottom: 0;
+    height: .98rem;
+    width: 100%;
+    background: white;
+    display: flex;
+    z-index: 10;
+  }
+  
+  .tab > .tabItem {
+    flex: 1;
+  }
+  
+  .tab > .tabItem.active {
+    font-weight: bolder;
+    .itemName {
+        color: #DD1A21;
+    //   color: #333;
+    }
+  
+    .itemIcon {
+      color: #DD1A21;
+    }
+  }
+  
+  .itemIcon {
+    text-align: center;
+    font-size: .44rem;
+    transition: all 0.5s ease-in-out;
+    // margin-top: 10px;
+    color: #bbb;
+    // font-size: 20px;
+  
+    i {
+      font-size: .52rem;
+    }
+  }
+  
+  
+  .itemName {
+    text-align: center;
+    font-size: .2rem;
+    line-height: .2rem;
+    transition: all .5s;
+    margin-top: .1rem;
+    color: #bbb;
+  }
+  .noSelect {
+    user-select: none
+  }
