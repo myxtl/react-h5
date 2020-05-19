@@ -13,7 +13,7 @@ class Tab extends Component {
         let showTab = false
         routes.forEach((item, index) => {
             if (item.path === pathname) {
-                showTab = item.isTab
+                showTab = item.hasTab;
             }
         })
         return (

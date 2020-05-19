@@ -10,51 +10,58 @@ import Cart from '../pages/Cart';
 import User from '../pages/User';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import Test from '../pages/Test';
 
 
-const router = [
+const routes = [
     {
         path: '/home',
         name: 'home',
         component: Home,
-        isTab: true
+        hasTab: true
     },
     {
         path: '/goodsDetail/:id',
         name: 'goodsDetail',
         component: GoodsDetail,
-        isTab: false
+        hasTab: false
     },
     {
         path: '/category',
         name: 'category',
         component: Category,
-        isTab: true
+        hasTab: true
     },
     {
         path: '/cart',
         name: 'cart',
         component: Cart,
-        isTab: true
+        hasTab: true
     },
     {
         path: '/user',
         name: 'user',
         component: User,
-        isTab: true
+        hasTab: true
+    },
+    {
+        path: '/test',
+        name: 'test',
+        component: Test,
+        hasTab: false
     },
     {
         path: '/login',
         name: 'login',
         component: Login,
-        isTab: false
+        hasTab: false
     },
     {
         path: '/register',
         name: 'register',
         component: Register,
-        isTab: false
+        hasTab: false
     }
 ]
 
-export default router
+export default routes;

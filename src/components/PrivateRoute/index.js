@@ -21,8 +21,6 @@ class PrivateRoute extends Component {
         const {history} = this.props;
         if (!this.state.isLogoin) {
             history.replace("/login");
-        } else {
-            history.replace("/home");
         }
     }
     
@@ -30,17 +28,15 @@ class PrivateRoute extends Component {
         const {history} = this.props;
         if (!this.state.isLogoin) {
             history.replace("/login");
-        } else {
-            history.replace("/home");
         }
     }
 
     render() {
-        let {isTab, ...rest} = this.props;
+        let {hasTab, ...rest} = this.props;
         return this.state.isLogoin ?
             (<Route {...rest} render={(props) => {
                 return (
-                    <div className={isTab ? 'tabPageContent' : 'noTabPageContent'}>
+                    <div className={hasTab ? 'tabPageContent' : 'noTabPageContent'}>
                         <Component {...props} />
                     </div>
                 )

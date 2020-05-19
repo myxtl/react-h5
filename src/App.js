@@ -9,21 +9,16 @@ import PrivateRoute from './components/PrivateRoute';
 import routes from './router';
 import history from './utils/history';
 import Tab from './components/Tab';
+import config from './utils/config';
 
-const tabList = [
-  {icon: 'iconfont icon-shouye', name: '首页', url: '/home'},
-  {icon: 'iconfont icon-fenlei', name: '分类', url: '/category'},
-  {icon: 'iconfont icon-gouwuche', name: '购物车', url: '/cart'},
-  {icon: 'iconfont icon-wode', name: '我的', url: '/user'}
-]
 
-function RenderRouter({routes}) {
+function RenderRoutes({routes}) {
   return routes.map(item => {
     return <Fragment>
       <PrivateRoute
         path={item.path}
         key={item.name}
-        isTab={item.isTab}
+        hasTab={item.hasTab}
         exact
         component={item.component}
       />
@@ -36,8 +31,8 @@ class App extends Component {
       return <div className="App">
         <Router history={history}>
           <Fragment>
-              <RenderRouter routes={routes}></RenderRouter>
-              <Tab tabList={tabList}></Tab>
+              <RenderRoutes routes={routes}></RenderRoutes>
+              <Tab tabList={config.tabList}></Tab>
           </Fragment>
         </Router>
       </div>

@@ -3,8 +3,7 @@
  * @Author: 
  * @Date: 2020-05-06 15:29:07
  */
-/* config-overrides.js */
-/* config-overrides.js */
+
 const { injectBabelPlugin } = require('react-app-rewired');
 const rewireLess = require('react-app-rewire-less');
 
