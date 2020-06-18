@@ -5,8 +5,8 @@
  */
 export default {
     baseUrl: {
-        dev: 'http://192.168.0.109:3000',
-        pro: 'http://192.168.0.109:3000',
+        dev: 'http://192.168.0.112:5555',
+        pro: 'http://192.168.0.112:5555',
     },
     tabList: [{
             icon: 'iconfont icon-shouye',
