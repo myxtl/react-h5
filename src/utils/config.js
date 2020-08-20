@@ -13,11 +13,11 @@ export default {
             name: '首页',
             url: '/home'
         },
-        {
+        /* {
             icon: 'iconfont icon-fenlei',
             name: '分类',
             url: '/category'
-        },
+        }, */
         {
             icon: 'iconfont icon-gouwuche',
             name: '购物车',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getCategory } from '../../api'
+import http from '../../utils/http'
 
 class Category extends Component {
     constructor(props) {
@@ -11,7 +11,8 @@ class Category extends Component {
     }
 
     getCategoryList = async () => {
-        const res = await getCategory();
+        let res = await http.get('/category/query');
+        console.log(res)
     }
 
     render() {

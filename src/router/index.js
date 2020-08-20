@@ -10,7 +10,6 @@ import Cart from '../pages/Cart';
 import User from '../pages/User';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-import Test from '../pages/Test';
 
 
 const routes = [
@@ -30,7 +29,7 @@ const routes = [
         path: '/category',
         name: 'category',
         component: Category,
-        hasTab: true
+        hasTab: false
     },
     {
         path: '/cart',
@@ -43,12 +42,6 @@ const routes = [
         name: 'user',
         component: User,
         hasTab: true
-    },
-    {
-        path: '/test',
-        name: 'test',
-        component: Test,
-        hasTab: false
     },
     {
         path: '/login',
