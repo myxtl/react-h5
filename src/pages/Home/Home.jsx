@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Carousel, SearchBar } from 'antd-mobile';
-import { getCategory } from '../../api'
+import { Carousel } from 'antd-mobile';
+import { getCategory, getSign } from '../../api'
 import './style.less';
 
 class Home extends Component {
@@ -18,7 +18,13 @@ class Home extends Component {
                 data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
             });
         }, 100);
-        this.getCategoryData()
+        this.getCategoryData();
+        this.getOssConfig();
+    }
+
+    async getOssConfig () {
+        const res = await getSign();
+        console.log(res);
     }
 
     async getCategoryData() {
